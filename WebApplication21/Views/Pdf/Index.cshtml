@@ -1,26 +1,87 @@
-﻿@model List<WebApplication21.Models.PdfDocument>
+﻿<!-- 🔥 IMAGE SLIDER START -->
+<div id="mainSlider" class="carousel slide mb-4" data-bs-ride="carousel">
 
-<h2>PDF Documents</h2>
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2"></button>
+    </div>
 
-<a href="/Pdf/Upload">Upload New PDF</a>
+    <!-- Images -->
+    <div class="carousel-inner">
 
-<table border="1">
-    <tr>
-        <th>File Name</th>
-        <th>Download</th>
-    </tr>
+        <div class="carousel-item active">
+            <img src="~/css/bharat_2023.png" class="d-block w-100 slider-img" />
+        </div>
 
-    @if (Model != null)
-    {
-        foreach (var file in Model)
-        {
-            <tr>
-                <td>@file.FileName</td>
-                <td>
-                    <a href="/Pdf/Download/@file.Id">Download</a>
-                </td>
-            </tr>
-        }
-    }
+        <div class="carousel-item">
+            <img src="~/css/bharat_2023.png" class="d-block w-100 slider-img" />
+        </div>
 
-</table>
+        <div class="carousel-item">
+            <img src="~/css/" class="d-block w-100 slider-img" />
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+<!-- 🔥 IMAGE SLIDER END -->
+<!-- YOUR EXISTING CODE -->
+@model List<WebApplication21.Models.PdfDocument>
+<div class="main-section">
+
+    <!-- 🔥 LEFT SIDE (NOTIFICATIONS - BIGGER) -->
+    <div class="notice-container">
+
+        <h4 class="notice-title">📢 Latest Notifications</h4>
+
+        <div class="notice-list">
+            @if (Model != null)
+            {
+                foreach (var file in Model)
+                {
+                    <div class="notice-item">
+                        <span>›</span>
+                        <a href="/Pdf/Download/@file.Id">
+                            @file.FileName
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+
+    </div>
+    <!-- 🔥 RIGHT SIDE (OFFICIALS SECTION) -->
+    <div class="officials-container">
+
+        <!-- Official 1 -->
+        <div class="official-card">
+            <img src="~/css/omarsir (1).jpg" class="official-img" />
+            <div class="official-info">
+                <h5>Mr. Omar Abdullah</h5>
+                <p>Hon'ble Chief Minister</p>
+            </div>
+        </div>
+
+        <!-- Official 2 -->
+        <div class="official-card">
+            <img src="~/css/rr (1).jpg" class="official-img" />
+            <div class="official-info">
+                <h5>Mr. Kumar Rajeev Ranjan (IAS)</h5>
+                <p>Secretary to Government</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
