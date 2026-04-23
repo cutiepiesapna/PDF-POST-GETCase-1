@@ -158,3 +158,163 @@ body {
     margin: 5px 0 0;
     color: gray;
 }
+.gov-footer {
+    background: #1f1f1f;
+    color: #ccc;
+    font-family: Arial, sans-serif;
+}
+
+/* Logos section */
+.footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    padding: 10px;
+}
+
+.logo-container {
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.logo-container img {
+    height:110px;
+    object-fit: contain;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Links */
+.footer-links {
+    text-align: center;
+    padding: 10px;
+    background: #2b2b2b;
+}
+
+.footer-links a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Bottom section */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    background: #1a1a1a;
+}
+
+.footer-bottom strong {
+    color: #fff;
+}
+.org-wrapper {
+    padding: 30px;
+    background: #f5f5f5;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.org-container {
+    border: 4px solid #8b5e3c;
+    padding: 40px;
+    background: #e9e5df;
+    text-align: center;
+}
+
+.org-title {
+    background: #8b5e3c;
+    color: #fff;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.org-box {
+    background: #8b5e3c;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 8px;
+    width: 220px;
+    font-size: 13px;
+}
+
+
+/*Act & Rule*/
+.act-container {
+    padding: 30px 60px;
+    font-family: Arial, sans-serif;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+    .breadcrumb a {
+        color: green;
+        text-decoration: none;
+    }
+
+/* Title */
+.act-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+/* Table */
+.act-table {
+    border: 1px solid #ddd;
+}
+
+/* Header */
+.act-header {
+    background: #5a3b00;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* Rows */
+.act-row {
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    background: #f7f7f7;
+}
+
+    .act-row:nth-child(even) {
+        background: #efefef;
+    }
+
+    /* Links */
+    .act-row a {
+        text-decoration: none;
+        color: #444;
+    }
+
+        .act-row a:hover {
+            text-decoration: underline;
+        }

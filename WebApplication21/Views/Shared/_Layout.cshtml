@@ -45,8 +45,16 @@
                                 About Us
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Department Info</a></li>
-                                <li><a class="dropdown-item" href="#">Officers</a></li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Pdf" asp-action="VandM">
+                                        Vision And Mission
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Pdf" asp-action="Org">
+                                        Organization
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
@@ -55,10 +63,10 @@
                                 Core Services
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">ROR Status</a></li>
-                                <li><a class="dropdown-item" href="#">Public Services</a></li>
-                                <li><a class="dropdown-item" href="#">Schemes</a></li>
-                                <li><a class="dropdown-item" href="#">Works</a></li>
+                                <li><a class="dropdown-item" asp-controller="Pdf" asp-action="ViewPdf" asp-route-id="5">ROR Status</a></li>
+                                <li><a class="dropdown-item" asp-controller="Pdf" asp-action="ViewPdf" asp-route-id="3">Public Services</a></li>
+                                <li><a class="dropdown-item" asp-controller="Pdf" asp-action="ViewPdf" asp-route-id="3">Schemes</a></li>
+                                <li><a class="dropdown-item" asp-controller="Pdf" asp-action="ViewPdf" asp-route-id="4">Works</a></li>
                             </ul>
                         </li>
 
@@ -67,11 +75,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Patwar Halqa</a>
+                            <a class="nav-link" asp-controller="Pdf" asp-action="ViewPdf" asp-route-id="3">Patwar Service</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acts & Rules</a>
+                            <a class="nav-link" asp-controller="Pdf" asp-action="AandR">
+                                Acts & Rules
+                            </a>
                         </li>
 
                     </ul>
@@ -85,11 +95,46 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - WebApplication21 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <footer class="gov-footer">
+
+        <!-- Top Logo Slider Section -->
+        <div class="footer-logos">
+            <button class="nav-btn">&#10094;</button>
+
+            <div class="logo-container">
+                <img src="~/images/e-gazette.png" alt="ECI">
+                    <img src="~/images/eci.png" alt="eGazette">
+                        <img src="~/images/incredible-india.png" alt="GOI Directory">
+                            <img src="~/images/india-gov.png" alt="MyGov">
+                                <img src="~/images/mygov.png" alt="Grievance">
+                                    <img src="~/images/open-data2.png" alt="NVS">
+                                    </div>
+
+                                    <button class="nav-btn">&#10095;</button>
+                                </div>
+
+                                <!-- Links Section -->
+                                <div class="footer-links">
+                                    <a href="#">Feedback</a>
+                                    <a href="#">Website Policies</a>
+                                    <a href="#">Contact Us</a>
+                                    <a href="#">Web Information Manager</a>
+                                    <a href="#">FAQ's</a>
+                                    <a href="#">Disclaimer</a>
+                                    <a href="#">Help</a>
+                                    <a href="#">Terms & Conditions</a>
+                                </div>
+
+                                <!-- Bottom Info -->
+                                <div class="footer-bottom">
+                                    <p>
+                                        Website Content Managed by <strong>Department Name, Ministry Name, Government of India</strong><br />
+                                        Designed, Developed and Hosted by <strong>National Informatics Centre (NIC)</strong>
+                                    </p>
+                                    <p>Last Updated: April 16, 2026</p>
+                                </div>
+
+                            </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
