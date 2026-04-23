@@ -5,27 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebApplication21</title>
     <script type="importmap"></script>
+    
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApplication21.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication21</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <header class="gov-header">
+        <div class="top-bar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo-section d-flex align-items-center">
+                    <img src="~/css/clear_emblem.png" alt="Logo" class="logo" />
+                    <div class="title">
+                        <h5>GOVERNMENT OF JAMMU AND KASHMIR</h5>
+                        <h3>REVENUE DEPARTMENT</h3>
+                    </div>
+                </div>
+
+                <div class="right-logos">
+                    <img src="~/css/roshinij.jpg" class="mini-logo" />
+                    <img src="~/css/swach-bharat.png" class="mini-logo" />
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+            <div class="container">
+                <a class="navbar-brand" href="#">🏠</a>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    ☰
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Department Info</a></li>
+                                <li><a class="dropdown-item" href="#">Officers</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                Core Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">ROR Status</a></li>
+                                <li><a class="dropdown-item" href="#">Public Services</a></li>
+                                <li><a class="dropdown-item" href="#">Schemes</a></li>
+                                <li><a class="dropdown-item" href="#">Works</a></li>
+                            </ul>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">E-Compendium</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Patwar Halqa</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acts & Rules</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>

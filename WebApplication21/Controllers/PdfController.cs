@@ -26,28 +26,7 @@ namespace WebApplication20.Controllers
         }
 
         // Upload PDF
-        [HttpPost]
-        public async Task<IActionResult> Upload(IFormFile file)
-        {
-            if (file != null && file.Length > 0)
-            {
-                using (var memoryStream = new MemoryStream())
-                {
-                    await file.CopyToAsync(memoryStream);
-
-                    PdfDocument pdf = new PdfDocument
-                    {
-                        FileName = file.FileName,
-                        FileData = memoryStream.ToArray()
-                    };
-
-                    _context.PdfDocuments.Add(pdf);
-                    _context.SaveChanges();
-                }
-            }
-
-            return RedirectToAction("Index");
-        }
+    
 
         // Download PDF
         public IActionResult Download(int id)
