@@ -28,6 +28,6 @@ app.UseAuthorization();
 // Default route
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Pdf}/{action=Index}/{id?}");
+    pattern: "{controller=Pdf}/{action=index}/{id?}");
 
 app.Run();

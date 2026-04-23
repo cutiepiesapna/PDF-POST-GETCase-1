@@ -13,6 +13,16 @@ namespace WebApplication20.Controllers
             _context = context;
         }
 
+
+        public IActionResult ViewPdf(int id)
+        {
+            var pdf = _context.PdfDocuments.FirstOrDefault(x => x.Id == id);
+
+            if (pdf == null)
+                return Content("PDF not found");
+
+            return File(pdf.FileData, "application/pdf");
+        }
         public IActionResult Index()
         {
             var files = _context.PdfDocuments.ToList();
@@ -24,9 +34,19 @@ namespace WebApplication20.Controllers
         {
             return View();
         }
-
+        public IActionResult Org(){
+            return View();
+        }
+        public IActionResult AandR()
+        {
+            return View();
+        }
+        public IActionResult VandM()
+        {
+            return View();
+        }
         // Upload PDF
-    
+
 
         // Download PDF
         public IActionResult Download(int id)
